@@ -1,6 +1,6 @@
 //Token like contract
 contract Token{
-    function transfer(address _to, uint256 _value)(){}
+    function transfer(address _to, uint256 _value){}
     function balanceOf(address _address) returns(uint256){}
 }
 
@@ -20,7 +20,7 @@ contract TokenProxy{
     function Approve(){
         uint256 TokenBalance = Token.balanceOf(TokenAddress);
         if(TokenBalance > 0){
-            Token.transfer(ColdWallet, TokenBalance);
+            MyToken.transfer(ColdWallet, TokenBalance);
             return;
         }
         throw;
